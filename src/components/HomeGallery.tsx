@@ -93,7 +93,7 @@ export default function HomeGallery({ onSelectShader }: HomeGalleryProps) {
           flow shaders<span className="hero-dot">.</span>
         </h1>
         <p className="hero-subtitle">
-          an interactive study of motion.
+          a small interactive visual toy built using Paper Shaders.
           <br />
           Move. Disturb. Leave a trace.
         </p>

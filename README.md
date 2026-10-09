@@ -1,12 +1,12 @@
-# FLOW — An Interactive Study of Motion
+# FLOW — Interactive Visual Toy
 
-A generative visual experiment exploring motion, distortion, and interaction.
+A small interactive visual toy built using Paper Shaders.
 
 Built for the **Dodo Payments Design Engineer Assignment**.
 
 ## Overview
 
-FLOW is an interactive visual toy built with React, TypeScript, and Paper Shaders. It explores how pointer movement and user input influence shader-driven visuals, turning an abstract visual field into a responsive experience.
+FLOW is a small interactive visual toy built using Paper Shaders, React, and TypeScript. It explores how pointer movement and user input influence shader-driven visuals, turning an abstract visual field into a responsive, playable experience.
 
 The focus is on creating a simple, intuitive interaction where movement changes the visual and each input feels immediate.
 
