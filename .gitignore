@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Production builds
+dist/
+build/
+
+# Local cache & temp
+.cache/
+.vite/
+*.tsbuildinfo
+*.log
+*-debug.log*
+.tmp-*
+
+# Environment files
+.env*
+
+# Assignment PDF
+*.pdf
+
+.vercel
