@@ -15,6 +15,8 @@ The focus is on creating a simple, intuitive interaction where movement changes 
 - **Interactive shader visuals** — Explore generative effects through direct pointer interaction.
 - **Motion-responsive effects** — Influence the visual field through pointer movement.
 - **Interactive disturbances** — Trigger visual changes with clicks.
+- **Sound interaction** — Audio or sound effects that respond to user interaction.
+- **Capture visual** — Take a picture of the current visual and save it as an image.
 - **Multiple visual styles** — Experiment with different shader-based appearances.
 - **Minimal interface** — A dark, distraction-free environment focused on the visual experience.
 

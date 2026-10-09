@@ -45,7 +45,54 @@ class AudioSynth {
       gain.connect(this.ctx.destination)
 
       osc.start()
-      osc.stop(this.ctx.currentTime + 0.5)
+    } catch {
+      // AudioContext policy safe fallback
+    }
+  }
+
+  private lastMotionTime = 0
+
+  playMotion(speed: number): void {
+    if (!this.enabled || typeof window === "undefined" || speed < 0.35) return
+
+    const now = performance.now()
+    if (now - this.lastMotionTime < 130) return
+    this.lastMotionTime = now
+
+    try {
+      if (!this.ctx) {
+        const AudioContextClass =
+          window.AudioContext ||
+          (window as unknown as { webkitAudioContext: typeof AudioContext })
+            .webkitAudioContext
+        this.ctx = new AudioContextClass()
+      }
+
+      if (this.ctx.state === "suspended") {
+        this.ctx.resume()
+      }
+
+      const noteIndex = Math.min(
+        Math.floor((speed / 2.5) * this.scale.length),
+        this.scale.length - 1,
+      )
+      const freq = this.scale[noteIndex]
+
+      const osc = this.ctx.createOscillator()
+      const gain = this.ctx.createGain()
+
+      osc.type = "sine"
+      osc.frequency.setValueAtTime(freq, this.ctx.currentTime)
+
+      const volume = Math.min(speed * 0.03, 0.08)
+      gain.gain.setValueAtTime(volume, this.ctx.currentTime)
+      gain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + 0.22)
+
+      osc.connect(gain)
+      gain.connect(this.ctx.destination)
+
+      osc.start()
+      osc.stop(this.ctx.currentTime + 0.25)
     } catch {
       // AudioContext policy safe fallback
     }

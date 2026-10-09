@@ -211,8 +211,8 @@ export default function FullscreenToy({
             type="button"
             className="toy-btn"
             onClick={handleSnapshot}
-            title="Save PNG artwork (S)"
-            aria-label="Save PNG artwork"
+            title="Capture visual as PNG (S)"
+            aria-label="Capture visual as PNG"
           >
             <svg
               viewBox="0 0 16 16"
@@ -226,7 +226,7 @@ export default function FullscreenToy({
               <circle cx="8" cy="8" r="2.2" />
               <path d="M5.5 3V2h2v1" />
             </svg>
-            <span>Snapshot</span>
+            <span>Capture</span>
             <span className="btn-shortcut">S</span>
           </button>
 
@@ -249,7 +249,7 @@ export default function FullscreenToy({
                 d="M12.7 5.4A5.1 5.1 0 1 0 13 9M12.7 2.3v3.3H9.4"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-              />
+                />
             </svg>
             <span>Reset</span>
           </button>
@@ -273,7 +273,7 @@ export default function FullscreenToy({
               strokeLinejoin="round"
             />
           </svg>
-          <span>Artwork saved as PNG</span>
+          <span>Visual captured and saved as PNG</span>
         </div>
       )}
 

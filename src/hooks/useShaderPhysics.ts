@@ -83,6 +83,7 @@ export function useShaderPhysics() {
         )
         const v = dist / dt / 1400
         target.current.velocity = Math.min(v, 2.5)
+        synth.playMotion(target.current.velocity)
       }
 
       lastPointer.current = { x: e.clientX, y: e.clientY, time: now }
